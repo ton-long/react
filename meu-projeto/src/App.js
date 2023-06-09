@@ -1,4 +1,5 @@
 import './App.css';
+import HelloWorld from './components/HelloWorld';
 
 function App() {
   const name = 'Luã'
@@ -18,9 +19,10 @@ function App() {
       <p>Olá, {name}! </p>
       <p>Seu nome em letras maiúsculas: {newName}. </p>
       <p>Soma: {som(1, 3)} </p>
-      <img src={url} alt='minha imagem' />
+      <img src={url} alt='minha imagem' />   
+      <HelloWorld/>   
     </div>
-  );
+  );  
 }
 
 export default App;
