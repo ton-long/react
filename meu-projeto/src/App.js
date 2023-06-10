@@ -4,6 +4,9 @@ import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
 
 function App() {
+
+  //Entendendo o JSX
+
   const name = 'Luã'
   const newName = name.toUpperCase()
 
@@ -13,6 +16,7 @@ function App() {
 
   const url = 'https://via.placeholder.com/150'
   const nome = 'Yan'
+  
   return (
     <div className="App">
       <h1>Olá Mundo! </h1>
@@ -22,7 +26,13 @@ function App() {
       <p>Seu nome em letras maiúsculas: {newName}. </p>
       <p>Soma: {som(1, 3)} </p>
       <img src={url} alt='minha imagem' />   
-      <HelloWorld/>   
+
+      {/*Trabalhando com componentes*/}
+
+      <HelloWorld/>  
+
+      {/*Props*/}
+
       <h1>Trabalhando com Props</h1>
       <SayMyName nome='Luã'/>
       <SayMyName nome='Lucas'/>
@@ -34,7 +44,7 @@ function App() {
         profissao='Programador'
         foto='https://via.placeholder.com/100'
       />
-    </div>
+    </div> 
   );  
 }
 
