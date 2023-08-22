@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import HelloWorld from './components/HelloWorld';
 import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
@@ -7,6 +8,9 @@ import Evento from './components/Evento';
 import Form from './components/Form';
 import Condicional from './components/Condicional';
 import OutraLista from './components/OutraLista';
+import SeuNome from './components/SeuNome';
+import Saudacao from './components/Saudacao';
+
 
 function App() {
 
@@ -20,10 +24,12 @@ function App() {
   }
 
   const url = 'https://via.placeholder.com/150'
-  const nome = 'Yan'
+  const nome2 = 'Yan'
 
   const meusItens = ['React', 'Vue', 'Angular']
-  
+  //State Lift
+  const [nome, setNome] = useState()
+
   return (
     <div className="App">
       <h1>Olá Mundo! </h1>
@@ -43,7 +49,7 @@ function App() {
       <h1>Trabalhando com Props</h1>
       <SayMyName nome='Luã'/>
       <SayMyName nome='Lucas'/>
-      <SayMyName nome={nome}/>
+      <SayMyName nome={nome2}/>
 
       <Pessoa
         nome='Mateus'
@@ -68,6 +74,10 @@ function App() {
       <h1>Renderização de Listas</h1>
       <OutraLista itens={meusItens}/>
       <OutraLista itens={[]}/>
+
+      <h1>State Lift</h1>
+      <SeuNome setNome={setNome} />
+      <Saudacao nome={nome}/>
     </div> 
   );  
 }
