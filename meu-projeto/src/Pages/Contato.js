@@ -2,7 +2,7 @@ function Contato(){
     return(
         <div>
             <h1>Contato</h1>
-            <p>Conteúdo da página</p>
+            <p>Conteúdo para contato</p>
         </div>
     )
 }
